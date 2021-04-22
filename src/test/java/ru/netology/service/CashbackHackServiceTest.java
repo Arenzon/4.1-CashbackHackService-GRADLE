@@ -13,6 +13,9 @@ public class CashbackHackServiceTest {
         assertEquals(actualResult, expectedResult);
     }
 
+    private void assertEquals ( int actualResult, int expectedResult ) {
+    }
+
     @org.junit.Test
     public void showHigherBoundary(){
         int purchaseAmount = 1300;
