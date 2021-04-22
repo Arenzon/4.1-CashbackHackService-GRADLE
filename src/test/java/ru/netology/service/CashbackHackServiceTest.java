@@ -6,7 +6,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
-    @org.testng.annotations.Test
+    @Test
     public void showBelowBoundary(){
         int purchaseAmount = 600;
         int actualResult = service.remain(purchaseAmount);
@@ -14,7 +14,7 @@ public class CashbackHackServiceTest {
         assertEquals(actualResult, expectedResult);
 
     }
-    @org.testng.annotations.Test
+    @Test
     public void showHigherBoundary(){
         int purchaseAmount = 1300;
         int actualResult = service.remain(purchaseAmount);
@@ -22,7 +22,7 @@ public class CashbackHackServiceTest {
         assertEquals(actualResult, expectedResult);
 
     }
-    @org.testng.annotations.Test
+    @Test
     public void showNullBoundary(){
         int purchaseAmount = 0;
         int actualResult = service.remain(purchaseAmount);
@@ -30,12 +30,11 @@ public class CashbackHackServiceTest {
         assertEquals(actualResult, expectedResult);
 
     }
-    @org.testng.annotations.Test
+    @Test
     public void showEqualBoundary(){
         int purchaseAmount = 1000;
         int actualResult = service.remain(purchaseAmount);
         int expectedResult = 1000;
         assertEquals(actualResult, expectedResult);
-
     }
 }
